@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    padding: 0 15px;
+    position: relative;
+    order: 2; 
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.menu ul li a:hover {
+    background: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #888;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:focus {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+
+.dropdown-content a:focus {
+    background: green;
+    color: #fff;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(2.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.banner-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        align-items: flex;
+    }
+    .menu ul li {
+        margin: 0 15px 0 0;
+    }
+    .banner-text {
+        left: 50%;
+        text-align: center;
+        width: 70%;
+    }
+    .banner-text h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        margin-top: 0;
+        font-size: 17px;
+    }
+    nav {
+        padding: 15px;
+    }
+    .menu ul li a {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .banner-text {
+        left: 50%;
+        text-align: center;
+        width: 80%;
+    }
+    .banner-text h1 {
+        font-size: 18px;
+    }
+    .banner-text p {
+        margin: 15px 0;
+        font-size: 11px;
+    }
+    .banner-text button {
+        font-size: 12px;
+    }
+}
+.user-info {
+    order: 3;
+}
+
+.user-info p {
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+}
+
+.user-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.menu {
+    order:1;
+}
